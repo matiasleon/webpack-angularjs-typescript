@@ -1,4 +1,4 @@
-const templateUrl = require('./customHeader.html');
+const templateUrl = require('./customHeader.html')
 
 module CustomHeader {
 
@@ -17,7 +17,7 @@ module CustomHeader {
     //component
     export let header = {
         controller: HeaderController,
-        templateUrl: templateUrl,//"src/app/header/customHeader.html",
+        templateUrl: templateUrl,
         controllerAs: "header"
     }
 }

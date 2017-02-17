@@ -1,5 +1,5 @@
 import { HomeController } from './home.controller';
-const templateUrl = require('ngtemplate!html!./home.html');
+const templateUrl = require('./home.html');
 
 module Home {
 
@@ -8,7 +8,7 @@ module Home {
         $stateProvider
             .state('home', {
                 url: '/home',
-                templateUrl: templateUrl,//'src/app/home/home.html',
+                templateUrl: templateUrl,
                 controller: HomeController,
                 controllerAs: 'home'
             });

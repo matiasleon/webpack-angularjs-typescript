@@ -28,7 +28,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({ //para q genere automaticamente el index.html
-            template: './src/index.html'
+            template: './src/index.ejs'
         }),
         new webpack.ProvidePlugin({
             jQuery: 'jquery',
