@@ -1,0 +1,48 @@
+<h2>Nueva Leccion Aprendida</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form name="lessonForm" ng-submit="knowledges.create(knowledges.knowledge,lessonForm.$valid)" novalidate>
+
+            <div class="form-group" ng-class="{ 'has-error' : lessonForm.project.$invalid && knowledges.submitted }">
+                <label>Proyecto</label>
+                <input type="text" name="project" class="form-control" ng-model="knowledges.knowledge.project" placeholder="Nombre del proyecto"
+                    required>
+                    <p ng-show="lessonForm.project.$invalid && knowledges.submitted" class="text-danger pull-right">Nombre de proyecto obligatorio.</p>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : lessonForm.title.$invalid && knowledges.submitted }">
+                <label>Leccion</label>
+                <input type="text" name="title" class="form-control" ng-model="knowledges.knowledge.title" placeholder="Nombre de la leccion"
+                    required>
+                    <p ng-show="lessonForm.title.$invalid && knowledges.submitted" class="text-danger pull-right">Titulo de leccion obligatorio.</p>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : lessonForm.explanation.$invalid && knowledges.submitted }">
+                <label>Explicacion</label><br />
+                <textarea type="text" name="explanation" class="form-control" ng-model="knowledges.knowledge.explanation" placeholder="Escriba su explicacion:"
+                    required></textarea>
+                    <p ng-show="lessonForm.explanation.$invalid && knowledges.submitted" class="text-danger pull-right">Explicacion de solucion obligatoria.</p>
+            </div>
+
+            <div class="btn-group">
+                <label>Origen</label><br />
+                <button type="button" class="btn btn-default" ng-model="knowledges.knowledge.origin">Post-Mortem</button>
+                <button type="button" class="btn btn-default" ng-model="knowledges.knowledge.origin">SEPG</button>
+                <button type="button" class="btn btn-default" ng-model="knowledges.knowledge.origin">Retrospective</button>
+                <button type="button" class="btn btn-default" ng-model="knowledges.knowledge.origin">Origen</button>
+            </div><br /><br />
+
+            <div class="form-group" ng-class="{ 'has-error' : lessonForm.tag.$invalid && knowledges.submitted }">
+                <label>Tags</label>
+                <input type="text" name="tag" class="form-control" ng-model="knowledges.knowledge.tag" placeholder="Ingrese Tag" required>
+                <p ng-show="lessonForm.tag.$invalid && knowledges.submitted" class="text-danger pull-right">Tag de proyecto obligatorio.</p>
+            </div><br />
+
+            <button type="submit" class="btn btn-default pull-right">Crear</button>
+
+        </form>
+
+    </div>
+
+</div>

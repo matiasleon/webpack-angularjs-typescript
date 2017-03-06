@@ -1,17 +1,20 @@
-<div class='row'>
-    <div class='col-md-8'>
-        <div class='jumbotron'>
-            <h1>Hello, Webpack!</h1>
-            <p><a class='btn btn-primary btn-lg' href='https://webpack.github.io/' role='button'>Learn more</a></p>
-        </div>
-    </div>
-</div>
-<div class='row'>
-    <div class='col-md-8'>
-        <ul class='list-group'>
-            <li class='list-group-item' ng-repeat='knowledge in home.knowledges'></li>
-            <h2>{{knowledge.project}}</h2>
-            <p>{{knowledge.title}}</p>
+<div class ="row">
+    <div class="col-md-8">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="enti in home.knowledges">
+                <section class="lesson">
+                    <h3 class="title">{{enti.Title}}</h3>
+                    <img class="img-client" ng-src="https://fotos.hexacta.com:7443/clients/photo.php?name={{enti.Project}}" width="60" />
+                    <p class="explanation">{{enti.Explanation}}</p>
+                    <a class="social" href="">Me gusta</a>
+                    <a class="social" href="">Comentar</a>
+                    <p class="entry-meta">
+                        Tags </br>
+                        <a class="label label-danger">TAG 1</a> 
+                        <a class="label label-danger">TAG 2</a>
+                    </p>
+                </section>
+            </li>
         </ul>
     </div>
 </div>

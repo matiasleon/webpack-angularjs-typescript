@@ -1,0 +1,28 @@
+<nav class='navbar'>
+    <div class='collapse navbar-collapse menu'>
+        <div class='navbar-header col-md-offset-2'>
+            <a style="float: none" class='navbar-brand' href='#/'><img class="app-logo" ng-src="../images/hxt_logo.png"></a>
+        </div>
+        <form class='navbar-form navbar-left container'>
+            <div class='form-group'>
+                <input ng-model='search' type='text' size='100' placeholder='Buscar proyectos, lecciones, tags, etc' uib-typeahead='element as element.Title for element in header.getElementsBy($viewValue) | limitTo:10'
+                       class='form-control' typeahead-template-url="{{header.dropdownUrl}}">
+            </div>
+        </form>
+
+        <ul class='nav navbar-nav navbar-right'>
+            <li><a class="text-header" href='http://localhost:58386/Account/LogOut'>Salir</a></li>
+            <li><img class="app-logo" style="padding-right: 10px" ng-src="https://fotos.hexacta.com:7443/photo.php?username=mperalta" /></li>
+
+        </ul>
+    </div>
+</nav>
+
+
+<div class='navbar navbar-inverse header-hx' role='navigation'>
+    <div class='navbar-header col-md-4 col-md-offset-9' ng-hide="$state.current.name == 'knowledges'">
+        <a ng-hide="header.isKnowledgeView()" class='navbar-brand' data-ui-sref='knowledges'>
+            <span class='glyphicon glyphicon-plus'></span>
+        </a>
+    </div>
+</div>

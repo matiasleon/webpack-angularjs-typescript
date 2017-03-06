@@ -5,7 +5,7 @@ import 'bootstrap';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import { home } from "./home/home.module"
-import { customHeader } from "./header/customHeader.module";
+import { customHeader } from "./header/hx.searcher.header.module";
 import { common } from "./common/common.module";
 
 import routing from "./app.routes";

@@ -15,7 +15,6 @@ module Home {
 
         init() {
             this.homeService.getAll().then(response => {
-                console.log(response);
                 this.knowledges = response.data;
             })
         }

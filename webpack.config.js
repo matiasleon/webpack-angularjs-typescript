@@ -5,10 +5,6 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js$/,
-                loader: 'baggage?[file].html&[file].css'
-            },
-            {
                 test: /\.ts$/,
                 exclude: /node_modules/,
                 loaders: [
@@ -17,11 +13,15 @@ module.exports = {
                 ]
             }, {
                 test: /\.html$/,
-                loader: 'ngtemplate?relativeTo='+__dirname+'/!html'
+                loader: 'ngtemplate?relativeTo=' + __dirname + '/!html'
             }, {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
-                loader: 'file-loader?name=res/[name].[ext]?[hash]'
-            }, {
+                loader: 'file-loader?name=res/[name].[ext]?[hash]' // sacar res par q lo cree en el build
+            },
+            { 
+                test: /\.(png|eot|ttf|svg|gif)$/, loader: 'url-loader?limit=100000' 
+            },
+            {
                 test: /\.css$/,
                 loaders: ['style-loader', 'css-loader', 'postcss-loader']
             }]

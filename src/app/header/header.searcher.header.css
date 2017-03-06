@@ -1,0 +1,21 @@
+.header-hx {
+    padding: 20px;
+    background-color: #1ea69c;
+}
+
+.app-logo {
+    height: 50px;
+    float: left;
+    left: 10%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text-header{
+ color:#1ea69c   
+}

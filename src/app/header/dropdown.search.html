@@ -1,0 +1,9 @@
+<a style="margin-bottom: 3px; margin-top: 3px;">
+    <img ng-src="https://fotos.hexacta.com:7443/clients/photo.php?name={{match.model.Project}}" width="30"/>
+    <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+</a>
+<style>
+    .dropdown-menu {
+            min-width: 755px;
+    }
+</style>
